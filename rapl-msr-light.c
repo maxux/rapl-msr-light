@@ -296,7 +296,12 @@ int main(int argc, char *argv[]) {
 
         free(sockets.cpu_dev_msr[i]);
         sockets.cpu_dev_msr[i] = NULL;
+
+        free(pkgs[i]);
     }
+
+    free(sockets.cpu_dev_msr);
+    free(pkgs);
 
     return 0;
 }
