@@ -218,8 +218,10 @@ uint64_t *msr_read_raw(int fd, size_t offset, uint64_t *value) {
 }
 
 int main(int argc, char *argv[]) {
+    (void) argc;
+    (void) argv;
+
     rapl_pkg_t **pkgs;
-    uint64_t regval1, regval2;
 
     // Detect available CPU Packages on the host
     cpu_sockets_t sockets = cpu_sockets_detect();
