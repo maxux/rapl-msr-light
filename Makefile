@@ -1,5 +1,5 @@
 EXEC = rapl-msr-light
-CFLAGS += -W -O2 -g
+CFLAGS += -W -Wall -O2 -g
 LDFLAGS += -lm
 
 SRC=rapl-msr-light.c
